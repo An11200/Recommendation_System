@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .movie {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .genres {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Recommended Movies</h1>
+    <div class="movies">
+        {% for movie in movies %}
+        <div class="movie">
+            <p class="title">{{ movie.title }}</p>
+            <p class="genres">Genres: {{ movie.genres }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="back-btn">
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
